@@ -1,0 +1,18 @@
+{
+    "name":"CMakeTemplateSDK",
+    "version":"1.0.0.1",
+    "dependencies":{
+        "common":[
+            {
+                "name":"jsoncpp",
+                "version":"1.9.4",
+                "tag":"1.9.4",
+                "access":"PUBLIC",
+                "url":"https://git.tenorshare.cn/diceng-third-party/jsoncpp.git"
+            }
+        ],
+        "windows":[],
+        "linux":[],
+        "darwin":[]
+    }
+}

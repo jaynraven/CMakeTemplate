@@ -50,8 +50,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1, 0, 0, 3
- PRODUCTVERSION 1, 0, 0, 3
+ FILEVERSION 1, 0, 0, 4
+ PRODUCTVERSION 1, 0, 0, 4
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -68,12 +68,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LYJ"
             VALUE "FileDescription", "CMake Template"
-            VALUE "FileVersion", "1, 0, 0, 3-m-89a7431"
+            VALUE "FileVersion", "1, 0, 0, 4-m-20aa161"
             VALUE "InternalName", "CMake Template"
             VALUE "LegalCopyright", "Copyright (C) 2023"
             VALUE "OriginalFilename", ""
             VALUE "ProductName", "CMake Template"
-            VALUE "ProductVersion", "1, 0, 0, 3-m-89a7431"
+            VALUE "ProductVersion", "1, 0, 0, 4-m-20aa161"
         END
     END
     BLOCK "VarFileInfo"

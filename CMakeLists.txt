@@ -76,7 +76,7 @@ set(INTERFACE_DIR ${CODE_DIR}/interface)
 set(VERSION_DIR ${CODE_DIR}/version)
 set(APP_DIR ${CODE_DIR}/app)
 set(EXAMPLE_DIR ${PROJECT_SOURCE_DIR}/example)
-set(3TH_DIR ${CODE_DIR}/3th)
+set(3TH_DIR ${PROJECT_SOURCE_DIR}/3th)
 set(BIN_OUTPUT_DIR ${BIN_DIR}/${INSTALL_ARCH})
 set(CPACKAGE_FILE ${PROJECT_SOURCE_DIR}/cpackage.json)
 set(CONFIG_DIR ${PROJECT_SOURCE_DIR}/config)
@@ -176,7 +176,7 @@ endif(WIN32)
 # Target link 3th library 链接第三方库
 # ---------------------------------------------------------------------------- #
 
-# target_add_third_party_from_config(${TARGET_NAME} ${CPACKAGE_FILE} ${3TH_DIR} ${TARGET_PLATFORM} ${TARGET_ARCH})
+target_add_third_party_from_config(${TARGET_NAME} ${CPACKAGE_FILE} ${3TH_DIR} ${TARGET_PLATFORM} ${INSTALL_BIN_NAME})
 
 # ---------------------------------------------------------------------------- #
 # Project add runnable target 添加可执行目标

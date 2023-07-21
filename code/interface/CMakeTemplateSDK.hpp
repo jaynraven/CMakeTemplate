@@ -1,16 +1,30 @@
 #ifndef CMAKETEMPLATESDK_HPP
 #define CMAKETEMPLATESDK_HPP
 
-#if defined(DLL_EXPORT)
-    #if defined(_MSC_VER) || defined(__MINGW32__)
-        #define API extern "C" __declspec(dllexport)
-    #elif defined(__GNUC__) || defined(__clang__)
-        #define API extern "C" __attribute__((visibility("default")))
-    #endif
+// #if defined(DLL_EXPORT)
+//     #if defined(_MSC_VER) || defined(__MINGW32__)
+//         #define API extern "C" __declspec(dllexport)
+//     #elif defined(__GNUC__) || defined(__clang__)
+//         #define API extern "C" __attribute__((visibility("default")))
+//     #endif
+// #else
+//     #if defined(_MSC_VER) || defined(__MINGW32__)
+//         #define API extern "C" __declspec(dllimport)
+//     #endif
+// #endif
+
+#ifdef _WIN32
+#ifdef DLL_EXPORT
+#define LIBRARY_API extern "C" __declspec(dllexport)
 #else
-    #if defined(_MSC_VER) || defined(__MINGW32__)
-        #define API extern "C" __declspec(dllimport)
-    #endif
+#define LIBRARY_API extern "C" __declspec(dllimport)
+#endif
+#else
+#ifdef DLL_EXPORT
+#define LIBRARY_API extern "C" __attribute__((visibility ("default")))
+#else
+#define LIBRARY_API extern "C" 
+#endif
 #endif
 
 
@@ -36,13 +50,13 @@ public:
  * @param log_path 
  * @return API* 
  */
-API CMakeTemplateSDK* InitCMakeTemplateSDK(const char* log_path);
+LIBRARY_API CMakeTemplateSDK* InitCMakeTemplateSDK(const char* log_path);
 
 /**
  * @brief 析构对象
  * 
  * @return API 
  */
-API void DestoryCMakeTemplateSDK(CMakeTemplateSDK* obj);
+LIBRARY_API void DestoryCMakeTemplateSDK(CMakeTemplateSDK* obj);
 
 #endif // CMAKETEMPLATESDK_HPP

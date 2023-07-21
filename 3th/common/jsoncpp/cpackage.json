@@ -1,11 +1,11 @@
 {
-    "name":"CMakeTemplateSDK",
-    "version":"1.0.0.0",
+    "name":"jsoncpp",
+    "version":"null",
     "dependencies":{
         "common":[
             {
                 "name":"jsoncpp",
-                "version":"1.9.5",
+                "version":"null",
                 "tag":"null",
                 "access":"PUBLIC",
                 "url":"null"
